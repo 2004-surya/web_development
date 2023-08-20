@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Greeting Message</title>
+</head>
+<body>
+    <script>
+        //Function to get the current time and return a greeting message
+        function getGreetingMessage(){
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+
+            let greetingMessage;
+
+            if (currentHour < 12){
+                greetingMessage="Good morning!";
+            } else if (currentHour < 18) {
+                greetingMessage = "Good afternoon!";
+            } else {
+                greetingMessage = "Good evening!";
+            }
+
+            return greetingMessage;
+        }
+
+        //Show the greeting message in an alert box
+        const message= getGreetingMessage();
+        alert(message);
+    </script>
+</body>
+</html>
